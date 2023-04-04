@@ -24,7 +24,7 @@ struct Service {
                 do {
                     let jsonDecoder = JSONDecoder()
                     let repos = try jsonDecoder.decode([Repository].self, from: data)
-                    completion(nil)
+                    completion(repos)
                 } catch {
                     completion(nil)
                 }
